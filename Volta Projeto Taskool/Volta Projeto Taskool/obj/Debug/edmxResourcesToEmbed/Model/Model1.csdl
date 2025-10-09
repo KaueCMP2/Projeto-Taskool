@@ -11,9 +11,8 @@
     <Property Name="Senha" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Telefone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
-    <Property Name="DataNascimento" Type="DateTime" Precision="0" />
   </EntityType>
-  <EntityContainer Name="dbTarefasEntities4" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="dbTarefasEntities6" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
   </EntityContainer>
 </Schema>

@@ -32,18 +32,17 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.BtTecladoVt = new System.Windows.Forms.LinkLabel();
             this.btCadastrarse = new System.Windows.Forms.LinkLabel();
-            this.BtCredencial = new System.Windows.Forms.PictureBox();
             this.LblCredencial = new System.Windows.Forms.Label();
             this.Titulo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.linkCadastro = new System.Windows.Forms.LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.BtCredencial)).BeginInit();
+            this.btCredencial = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LblUsuario
             // 
             this.LblUsuario.AutoSize = true;
-            this.LblUsuario.Location = new System.Drawing.Point(212, 109);
+            this.LblUsuario.Location = new System.Drawing.Point(213, 109);
             this.LblUsuario.Name = "LblUsuario";
             this.LblUsuario.Size = new System.Drawing.Size(43, 13);
             this.LblUsuario.TabIndex = 0;
@@ -63,7 +62,7 @@
             this.BtTecladoVt.Location = new System.Drawing.Point(355, 143);
             this.BtTecladoVt.Name = "BtTecladoVt";
             this.BtTecladoVt.Size = new System.Drawing.Size(78, 13);
-            this.BtTecladoVt.TabIndex = 2;
+            this.BtTecladoVt.TabIndex = 3;
             this.BtTecladoVt.TabStop = true;
             this.BtTecladoVt.Text = "Teclado Virtual";
             this.BtTecladoVt.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BtTecladoVt_LinkClicked);
@@ -75,21 +74,10 @@
             this.btCadastrarse.Size = new System.Drawing.Size(100, 23);
             this.btCadastrarse.TabIndex = 5;
             // 
-            // BtCredencial
-            // 
-            this.BtCredencial.BackgroundImage = global::Volta_Projeto_Taskool.Properties.Resources.user;
-            this.BtCredencial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtCredencial.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtCredencial.Location = new System.Drawing.Point(196, 205);
-            this.BtCredencial.Name = "BtCredencial";
-            this.BtCredencial.Size = new System.Drawing.Size(73, 73);
-            this.BtCredencial.TabIndex = 3;
-            this.BtCredencial.TabStop = false;
-            // 
             // LblCredencial
             // 
             this.LblCredencial.AutoSize = true;
-            this.LblCredencial.Location = new System.Drawing.Point(204, 180);
+            this.LblCredencial.Location = new System.Drawing.Point(207, 188);
             this.LblCredencial.Name = "LblCredencial";
             this.LblCredencial.Size = new System.Drawing.Size(57, 13);
             this.LblCredencial.TabIndex = 0;
@@ -111,7 +99,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(174, 309);
+            this.button1.Location = new System.Drawing.Point(176, 309);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 35);
             this.button1.TabIndex = 4;
@@ -126,10 +114,21 @@
             this.linkCadastro.Location = new System.Drawing.Point(204, 395);
             this.linkCadastro.Name = "linkCadastro";
             this.linkCadastro.Size = new System.Drawing.Size(63, 13);
-            this.linkCadastro.TabIndex = 2;
+            this.linkCadastro.TabIndex = 5;
             this.linkCadastro.TabStop = true;
             this.linkCadastro.Text = "Cadastre-se";
-            this.linkCadastro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BtTecladoVt_LinkClicked);
+            this.linkCadastro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCadastro_Click);
+            // 
+            // btCredencial
+            // 
+            this.btCredencial.BackgroundImage = global::Volta_Projeto_Taskool.Properties.Resources.user;
+            this.btCredencial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btCredencial.Location = new System.Drawing.Point(198, 205);
+            this.btCredencial.Name = "btCredencial";
+            this.btCredencial.Size = new System.Drawing.Size(75, 73);
+            this.btCredencial.TabIndex = 2;
+            this.btCredencial.UseVisualStyleBackColor = true;
+            this.btCredencial.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormLogin
             // 
@@ -137,8 +136,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(477, 417);
+            this.Controls.Add(this.btCredencial);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.BtCredencial);
             this.Controls.Add(this.btCadastrarse);
             this.Controls.Add(this.linkCadastro);
             this.Controls.Add(this.BtTecladoVt);
@@ -148,7 +147,6 @@
             this.Controls.Add(this.LblUsuario);
             this.Name = "FormLogin";
             this.Text = "Cadastre-se";
-            ((System.ComponentModel.ISupportInitialize)(this.BtCredencial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,11 +158,11 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.LinkLabel BtTecladoVt;
         private System.Windows.Forms.LinkLabel btCadastrarse;
-        private System.Windows.Forms.PictureBox BtCredencial;
         private System.Windows.Forms.Label LblCredencial;
         private System.Windows.Forms.Label Titulo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkCadastro;
+        private System.Windows.Forms.Button btCredencial;
     }
 }
 

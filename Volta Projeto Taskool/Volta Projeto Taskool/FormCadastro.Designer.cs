@@ -40,7 +40,10 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btGeraAuto = new System.Windows.Forms.Button();
-            this.btCadastro = new System.Windows.Forms.Button();
+            this.btSalvar = new System.Windows.Forms.Button();
+            this.BoxSelecionarCredencial = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.BoxSelecionarCredencial)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +55,6 @@
             this.label1.Size = new System.Drawing.Size(190, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastre-se";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // LblNome
             // 
@@ -62,7 +64,6 @@
             this.LblNome.Size = new System.Drawing.Size(35, 13);
             this.LblNome.TabIndex = 0;
             this.LblNome.Text = "Nome";
-            this.LblNome.Click += new System.EventHandler(this.label1_Click);
             // 
             // LblEmail
             // 
@@ -72,7 +73,6 @@
             this.LblEmail.Size = new System.Drawing.Size(32, 13);
             this.LblEmail.TabIndex = 0;
             this.LblEmail.Text = "Email";
-            this.LblEmail.Click += new System.EventHandler(this.label1_Click);
             // 
             // LblTelefone
             // 
@@ -82,17 +82,15 @@
             this.LblTelefone.Size = new System.Drawing.Size(49, 13);
             this.LblTelefone.TabIndex = 0;
             this.LblTelefone.Text = "Telefone";
-            this.LblTelefone.Click += new System.EventHandler(this.label1_Click);
             // 
             // LblUsuario
             // 
             this.LblUsuario.AutoSize = true;
-            this.LblUsuario.Location = new System.Drawing.Point(80, 192);
+            this.LblUsuario.Location = new System.Drawing.Point(80, 188);
             this.LblUsuario.Name = "LblUsuario";
             this.LblUsuario.Size = new System.Drawing.Size(43, 13);
             this.LblUsuario.TabIndex = 0;
             this.LblUsuario.Text = "Usuário";
-            this.LblUsuario.Click += new System.EventHandler(this.label1_Click);
             // 
             // LblDataNasc
             // 
@@ -102,7 +100,6 @@
             this.LblDataNasc.Size = new System.Drawing.Size(76, 13);
             this.LblDataNasc.TabIndex = 0;
             this.LblDataNasc.Text = "Data de Nasc.";
-            this.LblDataNasc.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtNome
             // 
@@ -116,21 +113,21 @@
             this.txtEmail.Location = new System.Drawing.Point(132, 119);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(291, 20);
-            this.txtEmail.TabIndex = 1;
+            this.txtEmail.TabIndex = 2;
             // 
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(132, 149);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(291, 20);
-            this.txtTelefone.TabIndex = 1;
+            this.txtTelefone.TabIndex = 3;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(132, 187);
+            this.txtUsuario.Location = new System.Drawing.Point(132, 183);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(291, 20);
-            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.TabIndex = 4;
             // 
             // dateTimePicker1
             // 
@@ -138,40 +135,67 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(132, 218);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dateTimePicker1.TabIndex = 6;
             // 
             // btGeraAuto
             // 
             this.btGeraAuto.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.btGeraAuto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btGeraAuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGeraAuto.Location = new System.Drawing.Point(431, 181);
+            this.btGeraAuto.Location = new System.Drawing.Point(431, 177);
             this.btGeraAuto.Name = "btGeraAuto";
             this.btGeraAuto.Size = new System.Drawing.Size(61, 33);
-            this.btGeraAuto.TabIndex = 3;
+            this.btGeraAuto.TabIndex = 5;
             this.btGeraAuto.Text = "Gerar Aleatorio";
             this.btGeraAuto.UseVisualStyleBackColor = false;
             // 
-            // btCadastro
+            // btSalvar
             // 
-            this.btCadastro.BackColor = System.Drawing.Color.LightGray;
-            this.btCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btCadastro.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCadastro.Location = new System.Drawing.Point(194, 278);
-            this.btCadastro.Name = "btCadastro";
-            this.btCadastro.Size = new System.Drawing.Size(119, 35);
-            this.btCadastro.TabIndex = 5;
-            this.btCadastro.Text = "Cadastrar";
-            this.btCadastro.UseVisualStyleBackColor = false;
-            this.btCadastro.Click += new System.EventHandler(this.btCadastro_Click);
+            this.btSalvar.BackColor = System.Drawing.Color.LightGray;
+            this.btSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btSalvar.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSalvar.Location = new System.Drawing.Point(198, 393);
+            this.btSalvar.Name = "btSalvar";
+            this.btSalvar.Size = new System.Drawing.Size(119, 26);
+            this.btSalvar.TabIndex = 8;
+            this.btSalvar.Text = "Salvar";
+            this.btSalvar.UseVisualStyleBackColor = false;
+            this.btSalvar.Click += new System.EventHandler(this.btCadastro_Click);
+            // 
+            // BoxSelecionarCredencial
+            // 
+            this.BoxSelecionarCredencial.BackColor = System.Drawing.Color.Transparent;
+            this.BoxSelecionarCredencial.BackgroundImage = global::Volta_Projeto_Taskool.Properties.Resources.user;
+            this.BoxSelecionarCredencial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BoxSelecionarCredencial.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BoxSelecionarCredencial.Location = new System.Drawing.Point(152, 267);
+            this.BoxSelecionarCredencial.Name = "BoxSelecionarCredencial";
+            this.BoxSelecionarCredencial.Size = new System.Drawing.Size(90, 90);
+            this.BoxSelecionarCredencial.TabIndex = 6;
+            this.BoxSelecionarCredencial.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.Location = new System.Drawing.Point(263, 279);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Selecionar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 374);
-            this.Controls.Add(this.btCadastro);
+            this.ClientSize = new System.Drawing.Size(512, 431);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BoxSelecionarCredencial);
+            this.Controls.Add(this.btSalvar);
             this.Controls.Add(this.btGeraAuto);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtUsuario);
@@ -186,6 +210,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormCadastro";
             this.Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)(this.BoxSelecionarCredencial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,6 +230,8 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btGeraAuto;
-        private System.Windows.Forms.Button btCadastro;
+        private System.Windows.Forms.Button btSalvar;
+        private System.Windows.Forms.PictureBox BoxSelecionarCredencial;
+        private System.Windows.Forms.Button button1;
     }
 }
