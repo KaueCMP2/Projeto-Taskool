@@ -1,0 +1,15 @@
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\bin\Debug\Volta Projeto Taskool.exe.config
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\bin\Debug\Volta Projeto Taskool.exe
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\bin\Debug\Volta Projeto Taskool.pdb
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\obj\Debug\Volta Projeto Taskool.csproj.AssemblyReference.cache
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\obj\Debug\Volta_Projeto_Taskool.Properties.Resources.resources
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\obj\Debug\Volta Projeto Taskool.csproj.GenerateResource.cache
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\obj\Debug\Volta Projeto Taskool.csproj.CoreCompileInputs.cache
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\obj\Debug\Volta Projeto Taskool.exe
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\obj\Debug\Volta Projeto Taskool.pdb
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\obj\Debug\Volta Projeto Taskool.exe.config
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\bin\Debug\EntityFramework.dll
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\bin\Debug\EntityFramework.xml
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\obj\Debug\Volta_Projeto_Taskool.FormLogin.resources
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\obj\Debug\Volta_Projeto_Taskool.FormCadastro.resources
+C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Volta Projeto Taskool\Volta Projeto Taskool\obj\Debug\Volta Pr.AE81292C.Up2Date
