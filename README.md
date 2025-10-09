@@ -1,7 +1,5 @@
 # Volta Projeto taskool
 
----
-
 ## Oque e o taskool?
 
 - Taskool é um projeto feito no windows forms em c# .net
