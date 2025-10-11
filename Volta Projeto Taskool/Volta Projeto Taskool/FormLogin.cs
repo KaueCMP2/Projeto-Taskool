@@ -22,7 +22,7 @@ namespace Volta_Projeto_Taskool
                 ofd.Title = "Selecione uma imagem";
                 ofd.Filter = "Image Files | *.jpg;*.png;";
 
-                if(ofd.ShowDialog() == DialogResult.OK)
+                if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     return Image.FromFile(ofd.FileName);
                 }
@@ -41,14 +41,14 @@ namespace Volta_Projeto_Taskool
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var usuarioBuscado = ctx.Usuario.FirstOrDefault(x => x.Usuario1==txtUsuario.Text);
+            var usuarioBuscado = ctx.Usuario.FirstOrDefault(x => x.Usuario1 == txtUsuario.Text);
 
             if (usuarioBuscado == null)
             {
                 MessageBox.Show("Dados incorretos!");
             }
 
-            else 
+            else
             {
                 MessageBox.Show($"Dados Corretos! Bem Vido {usuarioBuscado.Nome}");
             }
@@ -75,6 +75,21 @@ namespace Volta_Projeto_Taskool
         private void linkCadastro_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new FormCadastro().ShowDialog();
+        }
+
+        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Control)
+            {
+                if (e.KeyCode == Keys.C || e.KeyCode == Keys.V || e.KeyCode == Keys.X)
+                {
+                    MessageBox.Show("Nao pode");
+                    
+                    e.SuppressKeyPress = true;
+                    e.Handled = true;
+                }
+            }
+            
         }
     }
 }

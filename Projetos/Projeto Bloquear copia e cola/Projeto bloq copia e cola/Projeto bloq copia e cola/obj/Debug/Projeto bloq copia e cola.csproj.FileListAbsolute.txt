@@ -1,0 +1,11 @@
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Bloquear copia e cola\Projeto bloq copia e cola\Projeto bloq copia e cola\bin\Debug\Projeto bloq copia e cola.exe.config
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Bloquear copia e cola\Projeto bloq copia e cola\Projeto bloq copia e cola\bin\Debug\Projeto bloq copia e cola.exe
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Bloquear copia e cola\Projeto bloq copia e cola\Projeto bloq copia e cola\bin\Debug\Projeto bloq copia e cola.pdb
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Bloquear copia e cola\Projeto bloq copia e cola\Projeto bloq copia e cola\obj\Debug\Projeto bloq copia e cola.csproj.AssemblyReference.cache
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Bloquear copia e cola\Projeto bloq copia e cola\Projeto bloq copia e cola\obj\Debug\Projeto_bloq_copia_e_cola.Form1.resources
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Bloquear copia e cola\Projeto bloq copia e cola\Projeto bloq copia e cola\obj\Debug\Projeto_bloq_copia_e_cola.Properties.Resources.resources
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Bloquear copia e cola\Projeto bloq copia e cola\Projeto bloq copia e cola\obj\Debug\Projeto bloq copia e cola.csproj.GenerateResource.cache
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Bloquear copia e cola\Projeto bloq copia e cola\Projeto bloq copia e cola\obj\Debug\Projeto bloq copia e cola.csproj.CoreCompileInputs.cache
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Bloquear copia e cola\Projeto bloq copia e cola\Projeto bloq copia e cola\obj\Debug\Projeto bloq copia e cola.exe
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Bloquear copia e cola\Projeto bloq copia e cola\Projeto bloq copia e cola\obj\Debug\Projeto bloq copia e cola.pdb
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Bloquear copia e cola\Projeto bloq copia e cola\Projeto bloq copia e cola\obj\Debug\Projeto bloq copia e cola.exe.config
