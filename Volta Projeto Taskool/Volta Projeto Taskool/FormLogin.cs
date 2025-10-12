@@ -14,7 +14,8 @@ namespace Volta_Projeto_Taskool
 {
     public partial class FormLogin : Form
     {
-
+        
+        dbTarefasEntities6 ctx = new dbTarefasEntities6();
         private Image selecionarImagem()
         {
             using (OpenFileDialog ofd = new OpenFileDialog())
@@ -33,10 +34,12 @@ namespace Volta_Projeto_Taskool
             }
         }
 
-        dbTarefasEntities6 ctx = new dbTarefasEntities6();
+
         public FormLogin()
         {
             InitializeComponent();
+
+            txtUsuario.ShortcutsEnabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,21 +78,6 @@ namespace Volta_Projeto_Taskool
         private void linkCadastro_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new FormCadastro().ShowDialog();
-        }
-
-        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.Control)
-            {
-                if (e.KeyCode == Keys.C || e.KeyCode == Keys.V || e.KeyCode == Keys.X)
-                {
-                    MessageBox.Show("Nao pode");
-                    
-                    e.SuppressKeyPress = true;
-                    e.Handled = true;
-                }
-            }
-            
         }
     }
 }

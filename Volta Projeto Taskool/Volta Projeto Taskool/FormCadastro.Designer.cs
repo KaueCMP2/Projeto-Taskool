@@ -148,6 +148,7 @@
             this.btGeraAuto.TabIndex = 5;
             this.btGeraAuto.Text = "Gerar Aleatorio";
             this.btGeraAuto.UseVisualStyleBackColor = false;
+            this.btGeraAuto.Click += new System.EventHandler(this.btGeraAuto_Click);
             // 
             // btSalvar
             // 
