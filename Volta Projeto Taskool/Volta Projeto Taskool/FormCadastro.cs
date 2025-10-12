@@ -84,6 +84,39 @@ namespace Volta_Projeto_Taskool
             }
         }
 
-        
+        private void btGeraAuto_Click(object sender, EventArgs e)
+        {
+            if (txtNome.Text != null)
+            {
+                var nomeCompleto = txtNome.Text;
+                var random = new Random();
+                string[] partesNome = nomeCompleto.Split(' ');
+
+                string nickAleatiorio = partesNome[0] + '.';
+
+                if (partesNome.Length > 1)
+                {
+                    nickAleatiorio += partesNome[partesNome.Length - 1];
+                    nickAleatiorio += random.Next(1, 100);
+
+                    txtUsuario.Text = nickAleatiorio;
+                }
+
+                else if (partesNome.Length <= 1)
+                {
+
+                    MessageBox.Show("Adicione seu nome completo!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    SystemSounds.Beep.Play();
+                    txtNome.Focus();
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Adicione seu nome", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SystemSounds.Beep.Play();
+                txtNome.Focus();
+            }
+        }
     }
 }

@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\KaueCMP2\\Documents\\Projeto-Taskool\\Volta Projeto Taskool\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{807DD701-D682-4CCB-BF95-56207D231E2B}|Volta Projeto Taskool\\Volta Projeto Taskool.csproj|C:\\Users\\KaueCMP2\\Documents\\Projeto-Taskool\\Volta Projeto Taskool\\volta projeto taskool\\formcadastro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{807DD701-D682-4CCB-BF95-56207D231E2B}|Volta Projeto Taskool\\Volta Projeto Taskool.csproj|C:\\Users\\KaueCMP2\\Documents\\Projeto-Taskool\\Volta Projeto Taskool\\volta projeto taskool\\formcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{807DD701-D682-4CCB-BF95-56207D231E2B}|Volta Projeto Taskool\\Volta Projeto Taskool.csproj|solutionrelative:volta projeto taskool\\formcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{807DD701-D682-4CCB-BF95-56207D231E2B}|Volta Projeto Taskool\\Volta Projeto Taskool.csproj|c:\\users\\kauecmp2\\documents\\projeto-taskool\\volta projeto taskool\\volta projeto taskool\\formcadastro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{807DD701-D682-4CCB-BF95-56207D231E2B}|Volta Projeto Taskool\\Volta Projeto Taskool.csproj|solutionrelative:volta projeto taskool\\formcadastro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,11 +23,7 @@
       "RelativeMoniker": "D:0:0:{807DD701-D682-4CCB-BF95-56207D231E2B}|Volta Projeto Taskool\\Volta Projeto Taskool.csproj|solutionrelative:volta projeto taskool\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{807DD701-D682-4CCB-BF95-56207D231E2B}|Volta Projeto Taskool\\Volta Projeto Taskool.csproj|C:\\Users\\KaueCMP2\\Documents\\Projeto-Taskool\\Volta Projeto Taskool\\volta projeto taskool\\formcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{807DD701-D682-4CCB-BF95-56207D231E2B}|Volta Projeto Taskool\\Volta Projeto Taskool.csproj|solutionrelative:volta projeto taskool\\formcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{807DD701-D682-4CCB-BF95-56207D231E2B}|Volta Projeto Taskool\\Volta Projeto Taskool.csproj|c:\\users\\kauecmp2\\documents\\projeto-taskool\\volta projeto taskool\\volta projeto taskool\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{807DD701-D682-4CCB-BF95-56207D231E2B}|Volta Projeto Taskool\\Volta Projeto Taskool.csproj|C:\\Users\\KaueCMP2\\Documents\\Projeto-Taskool\\Volta Projeto Taskool\\volta projeto taskool\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{807DD701-D682-4CCB-BF95-56207D231E2B}|Volta Projeto Taskool\\Volta Projeto Taskool.csproj|solutionrelative:volta projeto taskool\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -50,11 +50,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\KaueCMP2\\Documents\\Projeto-Taskool\\Volta Projeto Taskool\\Volta Projeto Taskool\\Form1.cs",
               "RelativeDocumentMoniker": "Volta Projeto Taskool\\Form1.cs",
@@ -62,12 +62,11 @@
               "RelativeToolTip": "Volta Projeto Taskool\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T23:46:35.947Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FormLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\KaueCMP2\\Documents\\Projeto-Taskool\\Volta Projeto Taskool\\Volta Projeto Taskool\\FormLogin.cs",
               "RelativeDocumentMoniker": "Volta Projeto Taskool\\FormLogin.cs",
@@ -75,12 +74,11 @@
               "RelativeToolTip": "Volta Projeto Taskool\\FormLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T23:21:25.377Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FormCadastro.cs [Design]",
               "DocumentMoniker": "C:\\Users\\KaueCMP2\\Documents\\Projeto-Taskool\\Volta Projeto Taskool\\Volta Projeto Taskool\\FormCadastro.cs",
               "RelativeDocumentMoniker": "Volta Projeto Taskool\\FormCadastro.cs",
@@ -109,25 +107,24 @@
               "RelativeToolTip": "Volta Projeto Taskool\\FormLogin.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAQwEsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T00:22:33.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T00:22:33.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "FormCadastro.cs",
               "DocumentMoniker": "C:\\Users\\KaueCMP2\\Documents\\Projeto-Taskool\\Volta Projeto Taskool\\Volta Projeto Taskool\\FormCadastro.cs",
               "RelativeDocumentMoniker": "Volta Projeto Taskool\\FormCadastro.cs",
               "ToolTip": "C:\\Users\\KaueCMP2\\Documents\\Projeto-Taskool\\Volta Projeto Taskool\\Volta Projeto Taskool\\FormCadastro.cs",
               "RelativeToolTip": "Volta Projeto Taskool\\FormCadastro.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAAAFYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAowFUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T01:47:30.171Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FormCadastro.Designer.cs",
               "DocumentMoniker": "C:\\Users\\KaueCMP2\\Documents\\Projeto-Taskool\\Volta Projeto Taskool\\Volta Projeto Taskool\\FormCadastro.Designer.cs",
               "RelativeDocumentMoniker": "Volta Projeto Taskool\\FormCadastro.Designer.cs",
@@ -148,8 +145,7 @@
               "RelativeToolTip": "Volta Projeto Taskool\\FormLogin.Designer.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAIAwwDcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T00:23:15.531Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T00:23:15.531Z"
             },
             {
               "$type": "Document",
@@ -160,8 +156,7 @@
               "ToolTip": "C:\\Users\\KaueCMP2\\Documents\\Projeto-Taskool\\Volta Projeto Taskool\\Volta Projeto Taskool\\Model\\Model1.edmx [Diagram1]",
               "RelativeToolTip": "Volta Projeto Taskool\\Model\\Model1.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-10-09T18:11:25.057Z",
-              "EditorCaption": " [Diagram1]"
+              "WhenOpened": "2025-10-09T18:11:25.057Z"
             },
             {
               "$type": "Document",
@@ -173,8 +168,7 @@
               "RelativeToolTip": "Volta Projeto Taskool\\Form1.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T19:57:31.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T19:57:31.601Z"
             },
             {
               "$type": "Document",
