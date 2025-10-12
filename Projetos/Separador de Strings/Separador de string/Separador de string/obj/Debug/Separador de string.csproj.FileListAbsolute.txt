@@ -1,0 +1,11 @@
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Separador de Strings\Separador de string\Separador de string\bin\Debug\Separador de string.exe.config
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Separador de Strings\Separador de string\Separador de string\bin\Debug\Separador de string.exe
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Separador de Strings\Separador de string\Separador de string\bin\Debug\Separador de string.pdb
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Separador de Strings\Separador de string\Separador de string\obj\Debug\Separador de string.csproj.AssemblyReference.cache
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Separador de Strings\Separador de string\Separador de string\obj\Debug\Separador_de_string.Form1.resources
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Separador de Strings\Separador de string\Separador de string\obj\Debug\Separador_de_string.Properties.Resources.resources
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Separador de Strings\Separador de string\Separador de string\obj\Debug\Separador de string.csproj.GenerateResource.cache
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Separador de Strings\Separador de string\Separador de string\obj\Debug\Separador de string.csproj.CoreCompileInputs.cache
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Separador de Strings\Separador de string\Separador de string\obj\Debug\Separador de string.exe
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Separador de Strings\Separador de string\Separador de string\obj\Debug\Separador de string.pdb
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Separador de Strings\Separador de string\Separador de string\obj\Debug\Separador de string.exe.config
