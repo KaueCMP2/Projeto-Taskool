@@ -43,7 +43,16 @@
             this.btSalvar = new System.Windows.Forms.Button();
             this.BoxSelecionarCredencial = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.BordaTxtNome = new System.Windows.Forms.PictureBox();
+            this.BordaTxtEmail = new System.Windows.Forms.PictureBox();
+            this.BordaTxtTelefone = new System.Windows.Forms.PictureBox();
+            this.BordaTxtUsuario = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BoxSelecionarCredencial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BordaTxtNome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BordaTxtEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BordaTxtTelefone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BordaTxtUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -107,6 +116,8 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(291, 20);
             this.txtNome.TabIndex = 1;
+            this.txtNome.Enter += new System.EventHandler(this.txtNome_Enter);
+            this.txtNome.Leave += new System.EventHandler(this.txtNome_Leave);
             // 
             // txtEmail
             // 
@@ -114,6 +125,8 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(291, 20);
             this.txtEmail.TabIndex = 2;
+            this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // txtTelefone
             // 
@@ -121,6 +134,8 @@
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(291, 20);
             this.txtTelefone.TabIndex = 3;
+            this.txtTelefone.Enter += new System.EventHandler(this.txtTelefone_Enter);
+            this.txtTelefone.Leave += new System.EventHandler(this.txtTelefone_Leave);
             // 
             // txtUsuario
             // 
@@ -128,6 +143,8 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(291, 20);
             this.txtUsuario.TabIndex = 4;
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // dateTimePicker1
             // 
@@ -156,7 +173,7 @@
             this.btSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btSalvar.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSalvar.Location = new System.Drawing.Point(198, 393);
+            this.btSalvar.Location = new System.Drawing.Point(198, 388);
             this.btSalvar.Name = "btSalvar";
             this.btSalvar.Size = new System.Drawing.Size(119, 26);
             this.btSalvar.TabIndex = 8;
@@ -189,20 +206,76 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(208, 422);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(103, 13);
+            this.linkLabel1.TabIndex = 9;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Já tem conta? Login";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // BordaTxtNome
+            // 
+            this.BordaTxtNome.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BordaTxtNome.Location = new System.Drawing.Point(130, 83);
+            this.BordaTxtNome.Name = "BordaTxtNome";
+            this.BordaTxtNome.Size = new System.Drawing.Size(295, 24);
+            this.BordaTxtNome.TabIndex = 14;
+            this.BordaTxtNome.TabStop = false;
+            this.BordaTxtNome.Visible = false;
+            // 
+            // BordaTxtEmail
+            // 
+            this.BordaTxtEmail.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BordaTxtEmail.Location = new System.Drawing.Point(130, 116);
+            this.BordaTxtEmail.Name = "BordaTxtEmail";
+            this.BordaTxtEmail.Size = new System.Drawing.Size(295, 24);
+            this.BordaTxtEmail.TabIndex = 14;
+            this.BordaTxtEmail.TabStop = false;
+            this.BordaTxtEmail.Visible = false;
+            // 
+            // BordaTxtTelefone
+            // 
+            this.BordaTxtTelefone.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BordaTxtTelefone.Location = new System.Drawing.Point(130, 146);
+            this.BordaTxtTelefone.Name = "BordaTxtTelefone";
+            this.BordaTxtTelefone.Size = new System.Drawing.Size(295, 24);
+            this.BordaTxtTelefone.TabIndex = 14;
+            this.BordaTxtTelefone.TabStop = false;
+            this.BordaTxtTelefone.Visible = false;
+            // 
+            // BordaTxtUsuario
+            // 
+            this.BordaTxtUsuario.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BordaTxtUsuario.Location = new System.Drawing.Point(130, 180);
+            this.BordaTxtUsuario.Name = "BordaTxtUsuario";
+            this.BordaTxtUsuario.Size = new System.Drawing.Size(295, 24);
+            this.BordaTxtUsuario.TabIndex = 14;
+            this.BordaTxtUsuario.TabStop = false;
+            this.BordaTxtUsuario.Visible = false;
+            // 
             // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 431);
+            this.ClientSize = new System.Drawing.Size(512, 447);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.BordaTxtUsuario);
+            this.Controls.Add(this.BordaTxtTelefone);
+            this.Controls.Add(this.BordaTxtEmail);
+            this.Controls.Add(this.BordaTxtNome);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BoxSelecionarCredencial);
             this.Controls.Add(this.btSalvar);
             this.Controls.Add(this.btGeraAuto);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.txtTelefone);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.LblDataNasc);
             this.Controls.Add(this.LblUsuario);
             this.Controls.Add(this.LblTelefone);
@@ -210,8 +283,12 @@
             this.Controls.Add(this.LblNome);
             this.Controls.Add(this.label1);
             this.Name = "FormCadastro";
-            this.Text = "Form2";
+            this.Text = "Cadastre-se";
             ((System.ComponentModel.ISupportInitialize)(this.BoxSelecionarCredencial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BordaTxtNome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BordaTxtEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BordaTxtTelefone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BordaTxtUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +311,10 @@
         private System.Windows.Forms.Button btSalvar;
         private System.Windows.Forms.PictureBox BoxSelecionarCredencial;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.PictureBox BordaTxtNome;
+        private System.Windows.Forms.PictureBox BordaTxtEmail;
+        private System.Windows.Forms.PictureBox BordaTxtTelefone;
+        private System.Windows.Forms.PictureBox BordaTxtUsuario;
     }
 }

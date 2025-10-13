@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Metadata.Edm;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -19,8 +20,10 @@ namespace Volta_Projeto_Taskool
         bool FotoCarregada = false;
         byte[] imagemCarregadaBytes;
 
+        // funcao capslock ativo ou nao
+
         // Funcao para carregar imagaem
-        dbTarefasEntities6 ctx = new dbTarefasEntities6();
+        dbTarefasEntities7 ctx = new dbTarefasEntities7();
         private Image selecionarImagem()
         {
             using (OpenFileDialog ofd = new OpenFileDialog())
@@ -53,7 +56,17 @@ namespace Volta_Projeto_Taskool
         {
             InitializeComponent();
 
+            if (Console.CapsLock)
+            {
+                lblCapsLock.Visible = true;
+            }
+            else
+            {
+                lblCapsLock.Visible = false;
+            }
+
             txtUsuario.ShortcutsEnabled = false;
+            StartPosition = FormStartPosition.CenterScreen; 
         }
 
         // ABRIR TECLADO VIRTUAL...
@@ -77,8 +90,8 @@ namespace Volta_Projeto_Taskool
 
         private void linkCadastro_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new FormCadastro().ShowDialog();
-            this.Close();
+            new FormCadastro().Show();
+            this.Hide();
         }
 
         private void BtEntrar_Click(object sender, EventArgs e)
@@ -115,7 +128,7 @@ namespace Volta_Projeto_Taskool
             }
 
             
-        var usuarioBuscado = ctx.Usuario.FirstOrDefault(x => x.UsuarioLogin == txtUsuario.Text);
+        var usuarioBuscado = ctx.Usuario.FirstOrDefault(x => x.Usuario1 == txtUsuario.Text);
 
             if(usuarioBuscado == null)
             {
@@ -131,7 +144,7 @@ namespace Volta_Projeto_Taskool
 
                 if (mesmaImagem)
                 {
-                    MessageBox.Show($"Parabens {usuarioBuscado.UsuarioLogin}! ", "login efetuado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Parabens {usuarioBuscado.Usuario1}! ", "login efetuado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     SystemSounds.Beep .Play();
 
                     Form1 nFrm = new Form1();
@@ -144,6 +157,28 @@ namespace Volta_Projeto_Taskool
                     MessageBox.Show("A imagem não corresponde a credencial salva", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     SystemSounds .Beep .Play();
                 }                        
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            BordaTxtUsuario.Visible = true;
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            BordaTxtUsuario.Visible = false;
+        }
+
+        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (Console.CapsLock)
+            {
+                lblCapsLock.Visible = true;
+            }
+            else
+            {
+                lblCapsLock.Visible = false;
+            }
         }
     }
 }

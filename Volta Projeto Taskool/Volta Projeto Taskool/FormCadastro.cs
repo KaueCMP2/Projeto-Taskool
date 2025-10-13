@@ -27,6 +27,7 @@ namespace Volta_Projeto_Taskool
             InitializeComponent();
 
             deixarCircular(BoxSelecionarCredencial);
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private Image selecionarImagem() 
@@ -56,7 +57,7 @@ namespace Volta_Projeto_Taskool
             pic.Region = new Region(gp);
         }
                
-        dbTarefasEntities6 ctx = new dbTarefasEntities6(); // Instaciar ctx para chamar colunas do banco de dados
+        dbTarefasEntities7 ctx = new dbTarefasEntities7(); // Instaciar ctx para chamar colunas do banco de dados
         private void btCadastro_Click(object sender, EventArgs e)
         {
             if (txtUsuario.Text == "" || txtEmail.Text == "" || txtNome.Text == "" || txtTelefone.Text == "" || imagemCarregadaBytes == null)
@@ -65,7 +66,7 @@ namespace Volta_Projeto_Taskool
                 return;
             }
 
-            if (ctx.Usuario.Any(u => u.UsuarioLogin == txtUsuario.Text))
+            if (ctx.Usuario.Any(u => u.Usuario1 == txtUsuario.Text))
             {
                 var nomeIgual = MessageBox.Show($"O nome {txtUsuario.Text} ja esta cadastrado! Gerar Aleatorio?", "Erro", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                 SystemSounds.Beep.Play();
@@ -83,7 +84,7 @@ namespace Volta_Projeto_Taskool
                 usas.Email = txtEmail.Text;
                 usas.Nome = txtNome.Text;
                 usas.Telefone = txtTelefone.Text;
-                usas.UsuarioLogin = txtUsuario.Text;
+                usas.Usuario1 = txtUsuario.Text;
                 usas.dataNascimento = dateTimePicker1.Value;
                 usas.Foto = imagemCarregadaBytes;
 
@@ -92,6 +93,8 @@ namespace Volta_Projeto_Taskool
                 cadastroRealizado = true;
 
                 MessageBox.Show("Usuario adicionado com sucesso");
+
+                this.Hide();
             }
         }
 
@@ -147,6 +150,52 @@ namespace Volta_Projeto_Taskool
                 novoFormLogin.Show();
                 this.Close();
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new FormLogin().Show();
+            this.Hide();
+        }
+
+        private void txtNome_Enter(object sender, EventArgs e)
+        {
+            BordaTxtNome.Visible = true;
+        }
+
+        private void txtNome_Leave(object sender, EventArgs e)
+        {
+            BordaTxtNome.Visible = false;
+        }
+
+        private void txtEmail_Enter(object sender, EventArgs e)
+        {
+            BordaTxtEmail.Visible = true;
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            BordaTxtEmail.Visible = false;
+        }
+
+        private void txtTelefone_Enter(object sender, EventArgs e)
+        {
+            BordaTxtTelefone.Visible = true;
+        }
+
+        private void txtTelefone_Leave(object sender, EventArgs e)
+        {
+            BordaTxtTelefone.Visible = false;
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            BordaTxtUsuario.Visible = true;
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            BordaTxtUsuario.Visible = false;
         }
     }
 }

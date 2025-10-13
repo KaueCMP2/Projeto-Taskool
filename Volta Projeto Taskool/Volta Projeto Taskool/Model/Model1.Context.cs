@@ -13,10 +13,10 @@ namespace Volta_Projeto_Taskool.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dbTarefasEntities6 : DbContext
+    public partial class dbTarefasEntities7 : DbContext
     {
-        public dbTarefasEntities6()
-            : base("name=dbTarefasEntities6")
+        public dbTarefasEntities7()
+            : base("name=dbTarefasEntities7")
         {
         }
     

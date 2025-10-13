@@ -13,3 +13,4 @@ C:\Users\KaueCMP2\Documents\Projeto-Taskool\Volta Projeto Taskool\Volta Projeto 
 C:\Users\KaueCMP2\Documents\Projeto-Taskool\Volta Projeto Taskool\Volta Projeto Taskool\obj\x64\Debug\Volta Projeto Taskool.exe
 C:\Users\KaueCMP2\Documents\Projeto-Taskool\Volta Projeto Taskool\Volta Projeto Taskool\obj\x64\Debug\Volta Projeto Taskool.pdb
 C:\Users\KaueCMP2\Documents\Projeto-Taskool\Volta Projeto Taskool\Volta Projeto Taskool\obj\x64\Debug\Volta Projeto Taskool.exe.config
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Volta Projeto Taskool\Volta Projeto Taskool\obj\x64\Debug\Volta_Projeto_Taskool.Form1.resources

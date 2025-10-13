@@ -17,7 +17,7 @@ namespace Volta_Projeto_Taskool.Model
         public int Codigo { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
-        public string UsuarioLogin { get; set; }
+        public string Usuario1 { get; set; }
         public string Telefone { get; set; }
         public byte[] Foto { get; set; }
         public Nullable<System.DateTime> dataNascimento { get; set; }

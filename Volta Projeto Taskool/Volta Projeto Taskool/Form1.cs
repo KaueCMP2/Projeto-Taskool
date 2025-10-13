@@ -15,6 +15,6 @@ namespace Volta_Projeto_Taskool
         public Form1()
         {
             InitializeComponent();
-        }
+            StartPosition = FormStartPosition.CenterScreen;        }
     }
 }
