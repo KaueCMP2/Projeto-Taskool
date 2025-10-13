@@ -1,18 +1,49 @@
-# Volta Projeto taskool
+# 🛠 Taskool - Projeto
 
-## Oque e o taskool?
+## 📌 O que é o Taskool?
 
-- Taskool é um projeto feito no windows forms em c# .net
+- **Taskool é um projeto desenvolvido no Microsoft Visual Studio com o objetivo de treinamento prático em C#. Ele consiste em um sistema de cadastro e login, permitindo que o usuário gerencie suas credenciais de forma simples.**
 
----
+## 💡 Conceito
 
-### Organização do repositorio
+### O Taskool é um formulário interativo, permitindo que o usuário:
 
--  Na **pasta ArquivoGuia** encontra-se todo o **passo a passo** do projeto, com os componentes e etc.
-- Na **pasta Funções** encontram-se as **funções que foram usadas** durante o processo para exercicio de treinamento.
-- Na **pasta Projetos** encontram-se os **projetos bonus** que foram desenvolvidos para exercicio de treinamento, ultilizando as funções do projeto taskool.
-- E por ultimo mas não menos importante, a **pasta Volta Projeto Taskool** é onde fica **o projeto taskool**. **Que esta em processo**
+- **Se cadastre no sistema.**
 
+- **Adicione sua credencial / Foto p aceso.**
 
-#### Criador: **KaueCMP**
-#### Data Inicio: **08/10/2025**
+- **Efetue login utilizando as informações cadastradas.**
+
+## ⚙️ Ferramentas e Linguagens
+
+- **Linguagem: C#**
+
+- **IDE: Microsoft Visual Studio 2022 (Windows Forms)**
+
+- **Banco de Dados: SQL Server (SSMS)**
+
+## 🗂 Estrutura do Repositório
+
+- **ArquivoGuia: Passo a passo completo para conclusão do projeto, com todos os componentes e arquivos necessários.**
+
+- **Funções: Contém funções utilizadas durante o desenvolvimento, ideais para exercícios de treinamento.**
+
+- **Projetos: Projetos bônus desenvolvidos para prática, utilizando as funções do Taskool.**
+
+**Volta Projeto Taskool: Pasta principal onde o projeto Taskool está em desenvolvimento.**
+
+## 🚀 Como rodar o projeto
+
+- **Abra o projeto no Visual Studio 2022.**
+
+- **Configure o SQL Server (SSMS) conforme instruções na pasta ArquivoGuia.**
+
+- **Compile e execute o projeto.**
+
+- **Comece a se cadastrar e testar o login.**
+
+## 📝 Informações adicionais
+
+**Criador: KaueCMP**
+
+**Data de início: 08/10/2025**

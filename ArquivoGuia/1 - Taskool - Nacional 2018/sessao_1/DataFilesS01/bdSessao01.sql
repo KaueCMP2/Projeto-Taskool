@@ -10,16 +10,8 @@ create table Usuario(
 	Nome varchar(80) not null,
 	Email varchar(80) not null,
 	Usuario varchar(20) not null,
-	Senha varchar(30)  null,
 	Telefone varchar(15) not null,
 	Foto varbinary(max) not null,
+	dataNascimento DATE
 )
-
-ALTER TABLE Usuario
-DROP COLUMN Senha;
-
-ALTER TABLE Usuario
-ADD dataNascimento DATE;
-
-UPDATE Usuario
-SET 
+go

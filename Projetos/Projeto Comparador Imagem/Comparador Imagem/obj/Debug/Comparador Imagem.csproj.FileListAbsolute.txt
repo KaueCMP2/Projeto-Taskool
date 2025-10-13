@@ -9,3 +9,14 @@ C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Comparador Imagem\Comparador I
 C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Comparador Imagem\Comparador Imagem\obj\Debug\Comparador Imagem.exe
 C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Comparador Imagem\Comparador Imagem\obj\Debug\Comparador Imagem.pdb
 C:\Users\KaueCMP2\Documents\Volta Projeto Taskool\Comparador Imagem\Comparador Imagem\obj\Debug\Comparador Imagem.exe.config
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Comparador Imagem\Comparador Imagem\bin\Debug\Comparador Imagem.exe.config
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Comparador Imagem\Comparador Imagem\bin\Debug\Comparador Imagem.exe
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Comparador Imagem\Comparador Imagem\bin\Debug\Comparador Imagem.pdb
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Comparador Imagem\Comparador Imagem\obj\Debug\Comparador Imagem.csproj.AssemblyReference.cache
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Comparador Imagem\Comparador Imagem\obj\Debug\Comparador Imagem.exe.config
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Comparador Imagem\Comparador Imagem\obj\Debug\Comparador_Imagem.Form1.resources
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Comparador Imagem\Comparador Imagem\obj\Debug\Comparador_Imagem.Properties.Resources.resources
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Comparador Imagem\Comparador Imagem\obj\Debug\Comparador Imagem.csproj.GenerateResource.cache
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Comparador Imagem\Comparador Imagem\obj\Debug\Comparador Imagem.csproj.CoreCompileInputs.cache
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Comparador Imagem\Comparador Imagem\obj\Debug\Comparador Imagem.exe
+C:\Users\KaueCMP2\Documents\Projeto-Taskool\Projetos\Projeto Comparador Imagem\Comparador Imagem\obj\Debug\Comparador Imagem.pdb

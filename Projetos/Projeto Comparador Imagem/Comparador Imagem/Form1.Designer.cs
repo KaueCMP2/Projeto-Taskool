@@ -44,6 +44,7 @@
             this.btComparar.TabIndex = 0;
             this.btComparar.Text = "Comparar";
             this.btComparar.UseVisualStyleBackColor = true;
+            this.btComparar.Click += new System.EventHandler(this.btComparar_Click);
             // 
             // btImagem2
             // 

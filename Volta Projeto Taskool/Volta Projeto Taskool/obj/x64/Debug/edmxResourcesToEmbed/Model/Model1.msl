@@ -7,6 +7,7 @@
           <ScalarProperty Name="Codigo" ColumnName="Codigo" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
           <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UsuarioLogin" ColumnName="Usuario" />
           <ScalarProperty Name="Telefone" ColumnName="Telefone" />
           <ScalarProperty Name="Foto" ColumnName="Foto" />
           <ScalarProperty Name="dataNascimento" ColumnName="dataNascimento" />

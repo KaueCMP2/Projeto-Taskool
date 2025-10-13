@@ -34,7 +34,7 @@
             this.btCadastrarse = new System.Windows.Forms.LinkLabel();
             this.LblCredencial = new System.Windows.Forms.Label();
             this.Titulo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtEntrar = new System.Windows.Forms.Button();
             this.linkCadastro = new System.Windows.Forms.LinkLabel();
             this.btCredencial = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -93,19 +93,19 @@
             this.Titulo.TabIndex = 0;
             this.Titulo.Text = "Bem-Vindo ao Taskool";
             // 
-            // button1
+            // BtEntrar
             // 
-            this.button1.BackColor = System.Drawing.Color.LightGray;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(176, 309);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 35);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Entrar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtEntrar.BackColor = System.Drawing.Color.LightGray;
+            this.BtEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtEntrar.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtEntrar.Location = new System.Drawing.Point(176, 309);
+            this.BtEntrar.Name = "BtEntrar";
+            this.BtEntrar.Size = new System.Drawing.Size(119, 35);
+            this.BtEntrar.TabIndex = 4;
+            this.BtEntrar.Text = "Entrar";
+            this.BtEntrar.UseVisualStyleBackColor = false;
+            this.BtEntrar.Click += new System.EventHandler(this.BtEntrar_Click);
             // 
             // linkCadastro
             // 
@@ -137,7 +137,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(477, 417);
             this.Controls.Add(this.btCredencial);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtEntrar);
             this.Controls.Add(this.btCadastrarse);
             this.Controls.Add(this.linkCadastro);
             this.Controls.Add(this.BtTecladoVt);
@@ -160,7 +160,7 @@
         private System.Windows.Forms.LinkLabel btCadastrarse;
         private System.Windows.Forms.Label LblCredencial;
         private System.Windows.Forms.Label Titulo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtEntrar;
         private System.Windows.Forms.LinkLabel linkCadastro;
         private System.Windows.Forms.Button btCredencial;
     }
