@@ -38,7 +38,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dataNascimento = new System.Windows.Forms.DateTimePicker();
             this.btGeraAuto = new System.Windows.Forms.Button();
             this.btSalvar = new System.Windows.Forms.Button();
             this.BoxSelecionarCredencial = new System.Windows.Forms.PictureBox();
@@ -48,6 +48,7 @@
             this.BordaTxtEmail = new System.Windows.Forms.PictureBox();
             this.BordaTxtTelefone = new System.Windows.Forms.PictureBox();
             this.BordaTxtUsuario = new System.Windows.Forms.PictureBox();
+            this.btIdade = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BoxSelecionarCredencial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BordaTxtNome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BordaTxtEmail)).BeginInit();
@@ -146,13 +147,13 @@
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
-            // dateTimePicker1
+            // dataNascimento
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(132, 218);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dataNascimento.Location = new System.Drawing.Point(132, 218);
+            this.dataNascimento.Name = "dataNascimento";
+            this.dataNascimento.Size = new System.Drawing.Size(200, 20);
+            this.dataNascimento.TabIndex = 6;
             // 
             // btGeraAuto
             // 
@@ -257,11 +258,22 @@
             this.BordaTxtUsuario.TabStop = false;
             this.BordaTxtUsuario.Visible = false;
             // 
+            // btIdade
+            // 
+            this.btIdade.Location = new System.Drawing.Point(417, 255);
+            this.btIdade.Name = "btIdade";
+            this.btIdade.Size = new System.Drawing.Size(75, 23);
+            this.btIdade.TabIndex = 15;
+            this.btIdade.Text = "testeIdade";
+            this.btIdade.UseVisualStyleBackColor = true;
+            this.btIdade.Click += new System.EventHandler(this.btIdade_Click);
+            // 
             // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 447);
+            this.Controls.Add(this.btIdade);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtTelefone);
@@ -275,7 +287,7 @@
             this.Controls.Add(this.BoxSelecionarCredencial);
             this.Controls.Add(this.btSalvar);
             this.Controls.Add(this.btGeraAuto);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dataNascimento);
             this.Controls.Add(this.LblDataNasc);
             this.Controls.Add(this.LblUsuario);
             this.Controls.Add(this.LblTelefone);
@@ -306,7 +318,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dataNascimento;
         private System.Windows.Forms.Button btGeraAuto;
         private System.Windows.Forms.Button btSalvar;
         private System.Windows.Forms.PictureBox BoxSelecionarCredencial;
@@ -316,5 +328,6 @@
         private System.Windows.Forms.PictureBox BordaTxtEmail;
         private System.Windows.Forms.PictureBox BordaTxtTelefone;
         private System.Windows.Forms.PictureBox BordaTxtUsuario;
+        private System.Windows.Forms.Button btIdade;
     }
 }

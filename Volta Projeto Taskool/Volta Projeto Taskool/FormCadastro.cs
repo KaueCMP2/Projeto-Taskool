@@ -85,7 +85,7 @@ namespace Volta_Projeto_Taskool
                 usas.Nome = txtNome.Text;
                 usas.Telefone = txtTelefone.Text;
                 usas.Usuario1 = txtUsuario.Text;
-                usas.dataNascimento = dateTimePicker1.Value;
+                usas.dataNascimento = dataNascimento.Value;
                 usas.Foto = imagemCarregadaBytes;
 
                 ctx.Usuario.Add (usas);
@@ -118,11 +118,15 @@ namespace Volta_Projeto_Taskool
 
                 string nickAleatiorio = partesNome[0] + '.';
 
+
                 if (partesNome.Length > 1)
                 {
                     nickAleatiorio += partesNome[partesNome.Length - 1];
                     nickAleatiorio += random.Next(1, 100);
-                    txtUsuario.Text = nickAleatiorio;
+
+                    string converterParaString = nickAleatiorio.ToString();
+                    string nickToLower = converterParaString.ToLower();
+                    txtUsuario.Text = nickToLower;
                 }
 
                 else if (partesNome.Length <= 1)
@@ -196,6 +200,32 @@ namespace Volta_Projeto_Taskool
         private void txtUsuario_Leave(object sender, EventArgs e)
         {
             BordaTxtUsuario.Visible = false;
+        }
+
+        private void btIdade_Click(object sender, EventArgs e)
+        {
+            DateTime dataNasc = dataNascimento.Value;
+            DateTime dataAtual = DateTime.Now;
+            int idade = dataAtual.Year - dataNasc.Year;
+
+            if (dataAtual.Date < dataNasc.Date)
+            {
+                idade--;
+            }
+
+            int anoNascimento = idade - DateTime.Now.Year;
+
+            if(idade <= 17)
+            {
+                MessageBox.Show($"Erro... Precisa ter mais de 18 para acessar");
+                this.Close();
+            }
+            else if(idade >= 18)
+            {
+                MessageBox.Show($"tranquilo... tem {idade} anos de idade né ta liberado mn");
+
+            }
+
         }
     }
 }
