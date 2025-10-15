@@ -48,7 +48,8 @@
             this.BordaTxtEmail = new System.Windows.Forms.PictureBox();
             this.BordaTxtTelefone = new System.Windows.Forms.PictureBox();
             this.BordaTxtUsuario = new System.Windows.Forms.PictureBox();
-            this.btIdade = new System.Windows.Forms.Button();
+            this.lblAviso = new System.Windows.Forms.Label();
+            this.lblEmUso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BoxSelecionarCredencial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BordaTxtNome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BordaTxtEmail)).BeginInit();
@@ -258,22 +259,43 @@
             this.BordaTxtUsuario.TabStop = false;
             this.BordaTxtUsuario.Visible = false;
             // 
-            // btIdade
+            // lblAviso
             // 
-            this.btIdade.Location = new System.Drawing.Point(417, 255);
-            this.btIdade.Name = "btIdade";
-            this.btIdade.Size = new System.Drawing.Size(75, 23);
-            this.btIdade.TabIndex = 15;
-            this.btIdade.Text = "testeIdade";
-            this.btIdade.UseVisualStyleBackColor = true;
-            this.btIdade.Click += new System.EventHandler(this.btIdade_Click);
+            this.lblAviso.AutoSize = true;
+            this.lblAviso.BackColor = System.Drawing.Color.Transparent;
+            this.lblAviso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAviso.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblAviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAviso.ForeColor = System.Drawing.Color.Red;
+            this.lblAviso.Location = new System.Drawing.Point(411, 184);
+            this.lblAviso.Name = "lblAviso";
+            this.lblAviso.Size = new System.Drawing.Size(12, 16);
+            this.lblAviso.TabIndex = 15;
+            this.lblAviso.Text = "*";
+            this.lblAviso.Visible = false;
+            this.lblAviso.MouseLeave += new System.EventHandler(this.lblAviso_MouseLeave);
+            this.lblAviso.MouseHover += new System.EventHandler(this.lblAviso_MouseHover);
+            // 
+            // lblEmUso
+            // 
+            this.lblEmUso.AutoSize = true;
+            this.lblEmUso.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblEmUso.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmUso.ForeColor = System.Drawing.Color.Red;
+            this.lblEmUso.Location = new System.Drawing.Point(366, 174);
+            this.lblEmUso.Name = "lblEmUso";
+            this.lblEmUso.Size = new System.Drawing.Size(59, 9);
+            this.lblEmUso.TabIndex = 16;
+            this.lblEmUso.Text = "Usuario em uso";
+            this.lblEmUso.Visible = false;
             // 
             // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 447);
-            this.Controls.Add(this.btIdade);
+            this.Controls.Add(this.lblEmUso);
+            this.Controls.Add(this.lblAviso);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtTelefone);
@@ -328,6 +350,7 @@
         private System.Windows.Forms.PictureBox BordaTxtEmail;
         private System.Windows.Forms.PictureBox BordaTxtTelefone;
         private System.Windows.Forms.PictureBox BordaTxtUsuario;
-        private System.Windows.Forms.Button btIdade;
+        private System.Windows.Forms.Label lblAviso;
+        private System.Windows.Forms.Label lblEmUso;
     }
 }

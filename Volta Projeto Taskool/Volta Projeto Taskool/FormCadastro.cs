@@ -118,23 +118,75 @@ namespace Volta_Projeto_Taskool
 
                 string nickAleatiorio = partesNome[0] + '.';
 
-
-                if (partesNome.Length > 1)
+                DateTime dataNasc = dataNascimento.Value;
+                DateTime dataAtual = DateTime.Now;
+                int idade = dataAtual.Year - dataNasc.Year;
+                string ultimosDigitosAno = dataNascimento.Value.ToString("yy");
+                if (dataAtual.Date < dataNasc.Date)
                 {
-                    nickAleatiorio += partesNome[partesNome.Length - 1];
-                    nickAleatiorio += random.Next(1, 100);
-
-                    string converterParaString = nickAleatiorio.ToString();
-                    string nickToLower = converterParaString.ToLower();
-                    txtUsuario.Text = nickToLower;
+                    idade--;
                 }
 
-                else if (partesNome.Length <= 1)
+                if (partesNome.Length > 1 && idade >= 18)
                 {
 
-                    MessageBox.Show("Adicione seu nome completo!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    SystemSounds.Beep.Play();
-                    txtNome.Focus();
+                    nickAleatiorio += partesNome[partesNome.Length - 1];
+                    nickAleatiorio += ultimosDigitosAno;
+                    bool nomeExiste = ctx.Usuario.Any(u => u.Usuario1 == nickAleatiorio);
+                    
+
+                    if(nomeExiste)
+                    {
+                        MessageBox.Show($"O nome {txtUsuario.Text} já esta em uso, por fovor gere ou escolha outro", "Erro", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                        SystemSounds.Beep.Play();
+                
+                        btGeraAuto.Focus();
+                        lblAviso.Visible = true;
+                    }
+                    
+                        string converterParaString = nickAleatiorio.ToString();
+                        string nickToLower = converterParaString.ToLower();
+                        txtUsuario.Text = nickToLower;
+                        lblAviso.Visible = false;
+                }
+
+                else
+                {
+                    nickAleatiorio += partesNome[partesNome.Length -1] + random.Next(1, 100);
+                    bool nomeExiste = ctx.Usuario.Any(u => u.Usuario1 == nickAleatiorio);
+
+                    if (nomeExiste)
+                    {
+                        var nomeExisteDnv = MessageBox.Show($"Ops o nome {nickAleatiorio} tambem ja existe, gere outro por favor...", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        SystemSounds.Beep.Play();
+
+                        if(nomeExisteDnv == DialogResult.OK)
+                        {
+                            btGeraAuto.Focus();
+                            lblAviso.Visible = true;
+                        }
+
+                    }
+                    if (partesNome.Length <= 1)
+                    {
+                        MessageBox.Show("Adicione seu nome completo!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        SystemSounds.Beep.Play();
+                        txtNome.Focus();
+                    }
+
+                    else if (idade < 18)
+                    {
+                        MessageBox.Show("Precisa ser maior que 18 para acessar!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        SystemSounds.Beep.Play();
+                        dataNascimento.Focus();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("É necesario o nome completo e ter mais de 18!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        SystemSounds.Beep.Play();
+                        dataNascimento.Focus();
+                    }
                 }
             }
 
@@ -152,7 +204,7 @@ namespace Volta_Projeto_Taskool
 
                 FormLogin novoFormLogin = new FormLogin();
                 novoFormLogin.Show();
-                this.Close();
+                this.Hide();
             }
         }
 
@@ -202,29 +254,13 @@ namespace Volta_Projeto_Taskool
             BordaTxtUsuario.Visible = false;
         }
 
-        private void btIdade_Click(object sender, EventArgs e)
+        private void lblAviso_MouseHover(object sender, EventArgs e)
         {
-            DateTime dataNasc = dataNascimento.Value;
-            DateTime dataAtual = DateTime.Now;
-            int idade = dataAtual.Year - dataNasc.Year;
+            lblEmUso.Visible = true;
+        }
 
-            if (dataAtual.Date < dataNasc.Date)
-            {
-                idade--;
-            }
-
-            int anoNascimento = idade - DateTime.Now.Year;
-
-            if(idade <= 17)
-            {
-                MessageBox.Show($"Erro... Precisa ter mais de 18 para acessar");
-                this.Close();
-            }
-            else if(idade >= 18)
-            {
-                MessageBox.Show($"tranquilo... tem {idade} anos de idade né ta liberado mn");
-
-            }
+        private void lblAviso_MouseLeave(object sender, EventArgs e)
+        {
 
         }
     }
