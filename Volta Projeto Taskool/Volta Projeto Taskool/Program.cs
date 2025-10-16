@@ -16,7 +16,7 @@ namespace Volta_Projeto_Taskool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMenu());
+            Application.Run(new FormLogin());
             
         }
     }

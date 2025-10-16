@@ -25,7 +25,7 @@ namespace Volta_Projeto_Taskool
         byte[] imagemCarregadaBytes; // defino a imagem carregada como array de bytes
         bool cadastroRealizado = false; // Definir estado do cadastro para validação
         bool emailInvalido = false;
-
+        bool usuarioInvalido = false;
         public FormCadastro()
         {
             InitializeComponent();
@@ -66,7 +66,7 @@ namespace Volta_Projeto_Taskool
         {
             if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtEmail.Text) ||
                  string.IsNullOrWhiteSpace(txtNome.Text) || string.IsNullOrWhiteSpace(txtTelefone.Text) ||
-                 imagemCarregadaBytes == null || emailInvalido == false)
+                 imagemCarregadaBytes == null || emailInvalido == false || usuarioInvalido == false)
             {
                 MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -231,6 +231,7 @@ namespace Volta_Projeto_Taskool
                 {
                     txtEmail.Focus();
                     emailInvalido = true;
+
                 }
             }
         }
@@ -252,6 +253,18 @@ namespace Volta_Projeto_Taskool
 
         private void txtUsuario_Leave(object sender, EventArgs e)
         {
+            usuarioInvalido = ctx.Usuario.Any(u => u.Usuario1 == txtUsuario.Text);
+            usuarioInvalido = true;
+
+            if (usuarioInvalido)
+            {
+                lblAviso.Visible = true;
+
+
+                MessageBox.Show("Ops, esse nome de usuario ja esta em uso", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                SystemSounds.Beep.Play();
+
+            }
             BordaTxtUsuario.Visible = false;
         }
 
