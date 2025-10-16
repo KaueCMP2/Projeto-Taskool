@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Media;
+using System.Net.Mail;
 using System.Runtime;
 using System.Security.AccessControl;
 using System.Text;
@@ -22,6 +24,8 @@ namespace Volta_Projeto_Taskool
         bool fotoCarregada = false; // fotoCarregada como false para validações futuras
         byte[] imagemCarregadaBytes; // defino a imagem carregada como array de bytes
         bool cadastroRealizado = false; // Definir estado do cadastro para validação
+        bool emailInvalido = false;
+
         public FormCadastro()
         {
             InitializeComponent();
@@ -30,14 +34,14 @@ namespace Volta_Projeto_Taskool
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private Image selecionarImagem() 
+        private Image selecionarImagem()
         {
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
                 ofd.Title = "Selecionar imagem";
                 ofd.Filter = "Selecionar imagem | *.jpg;*.png";
 
-                if(ofd.ShowDialog() == DialogResult.OK)
+                if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     imagemCarregadaBytes = File.ReadAllBytes(ofd.FileName);
                     fotoCarregada = true;
@@ -53,14 +57,16 @@ namespace Volta_Projeto_Taskool
         private void deixarCircular(PictureBox pic)
         {
             System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
-            gp.AddEllipse(0,0, pic.Width - 1, pic.Height - 1);
+            gp.AddEllipse(0, 0, pic.Width - 1, pic.Height - 1);
             pic.Region = new Region(gp);
         }
-               
+
         dbTarefasEntities7 ctx = new dbTarefasEntities7(); // Instaciar ctx para chamar colunas do banco de dados
         private void btCadastro_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "" || txtEmail.Text == "" || txtNome.Text == "" || txtTelefone.Text == "" || imagemCarregadaBytes == null)
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                 string.IsNullOrWhiteSpace(txtNome.Text) || string.IsNullOrWhiteSpace(txtTelefone.Text) ||
+                 imagemCarregadaBytes == null || emailInvalido == false)
             {
                 MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -71,15 +77,16 @@ namespace Volta_Projeto_Taskool
                 var nomeIgual = MessageBox.Show($"O nome {txtUsuario.Text} ja esta cadastrado! Gerar Aleatorio?", "Erro", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                 SystemSounds.Beep.Play();
 
-                if (DialogResult.Yes == nomeIgual) 
+                if (DialogResult.Yes == nomeIgual)
                 {
                     btGeraAuto.Focus();
                 }
-                   
+
                 return;
             }
 
-            else { 
+            else
+            {
                 Usuario usas = new Usuario();
                 usas.Email = txtEmail.Text;
                 usas.Nome = txtNome.Text;
@@ -88,7 +95,7 @@ namespace Volta_Projeto_Taskool
                 usas.dataNascimento = dataNascimento.Value;
                 usas.Foto = imagemCarregadaBytes;
 
-                ctx.Usuario.Add (usas);
+                ctx.Usuario.Add(usas);
                 ctx.SaveChanges();
                 cadastroRealizado = true;
 
@@ -101,7 +108,7 @@ namespace Volta_Projeto_Taskool
         private void button1_Click(object sender, EventArgs e)
         {
             Image umagemEscolhida = selecionarImagem();
-            if(umagemEscolhida != null)
+            if (umagemEscolhida != null)
             {
                 BoxSelecionarCredencial.Image = umagemEscolhida;
                 BoxSelecionarCredencial.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -115,77 +122,43 @@ namespace Volta_Projeto_Taskool
                 var nomeCompleto = txtNome.Text;
                 var random = new Random();
                 string[] partesNome = nomeCompleto.Split(' ');
-
                 string nickAleatiorio = partesNome[0] + '.';
-
-                DateTime dataNasc = dataNascimento.Value;
-                DateTime dataAtual = DateTime.Now;
-                int idade = dataAtual.Year - dataNasc.Year;
                 string ultimosDigitosAno = dataNascimento.Value.ToString("yy");
-                if (dataAtual.Date < dataNasc.Date)
-                {
-                    idade--;
-                }
 
-                if (partesNome.Length > 1 && idade >= 18)
+                if (partesNome.Length > 2)
                 {
-
                     nickAleatiorio += partesNome[partesNome.Length - 1];
                     nickAleatiorio += ultimosDigitosAno;
                     bool nomeExiste = ctx.Usuario.Any(u => u.Usuario1 == nickAleatiorio);
-                    
 
-                    if(nomeExiste)
+
+                    if (nomeExiste)
                     {
-                        MessageBox.Show($"O nome {txtUsuario.Text} já esta em uso, por fovor gere ou escolha outro", "Erro", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-                        SystemSounds.Beep.Play();
-                
-                        btGeraAuto.Focus();
-                        lblAviso.Visible = true;
-                    }
-                    
+                        nickAleatiorio = partesNome[0] + '.' + partesNome[partesNome.Length - 2] + ultimosDigitosAno;
+
                         string converterParaString = nickAleatiorio.ToString();
                         string nickToLower = converterParaString.ToLower();
                         txtUsuario.Text = nickToLower;
                         lblAviso.Visible = false;
-                }
-
-                else
-                {
-                    nickAleatiorio += partesNome[partesNome.Length -1] + random.Next(1, 100);
-                    bool nomeExiste = ctx.Usuario.Any(u => u.Usuario1 == nickAleatiorio);
-
-                    if (nomeExiste)
-                    {
-                        var nomeExisteDnv = MessageBox.Show($"Ops o nome {nickAleatiorio} tambem ja existe, gere outro por favor...", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        SystemSounds.Beep.Play();
-
-                        if(nomeExisteDnv == DialogResult.OK)
-                        {
-                            btGeraAuto.Focus();
-                            lblAviso.Visible = true;
-                        }
-
-                    }
-                    if (partesNome.Length <= 1)
-                    {
-                        MessageBox.Show("Adicione seu nome completo!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        SystemSounds.Beep.Play();
-                        txtNome.Focus();
-                    }
-
-                    else if (idade < 18)
-                    {
-                        MessageBox.Show("Precisa ser maior que 18 para acessar!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        SystemSounds.Beep.Play();
-                        dataNascimento.Focus();
                     }
 
                     else
                     {
-                        MessageBox.Show("É necesario o nome completo e ter mais de 18!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        string converterParaString = nickAleatiorio.ToString();
+                        string nickToLower = converterParaString.ToLower();
+                        txtUsuario.Text = nickToLower;
+                        lblAviso.Visible = false;
+                    }
+                }
+
+                else
+                {
+                    if (partesNome.Length <= 2)
+                    {
+                        MessageBox.Show("Adicione seu nome completo!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         SystemSounds.Beep.Play();
-                        dataNascimento.Focus();
+                        txtNome.Focus();
                     }
                 }
             }
@@ -231,7 +204,35 @@ namespace Volta_Projeto_Taskool
 
         private void txtEmail_Leave(object sender, EventArgs e)
         {
+            var email = txtEmail.Text;
+
             BordaTxtEmail.Visible = false;
+
+            try
+            {
+                MailAddress mailAddress;
+
+                if (!string.IsNullOrWhiteSpace(email))
+                {
+                    mailAddress = new MailAddress(email);
+
+                    var mensagemEmailInvalido = MessageBox.Show($"O email: {email}... é valido", "sucesso", MessageBoxButtons.OK);
+                    SystemSounds.Beep.Play();
+                }
+                emailInvalido = false;
+            }
+
+            catch (Exception exc)
+            {
+                var mensagemEmailInvalido = MessageBox.Show($"O email: {email}... é invalido, por favor adcione um novo", "Erro", MessageBoxButtons.OK);
+                SystemSounds.Beep.Play();
+
+                if (mensagemEmailInvalido == DialogResult.OK)
+                {
+                    txtEmail.Focus();
+                    emailInvalido = true;
+                }
+            }
         }
 
         private void txtTelefone_Enter(object sender, EventArgs e)
@@ -261,7 +262,7 @@ namespace Volta_Projeto_Taskool
 
         private void lblAviso_MouseLeave(object sender, EventArgs e)
         {
-
+            lblEmUso.Visible = false;
         }
     }
 }

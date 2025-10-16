@@ -177,7 +177,7 @@
             this.Controls.Add(this.LblUsuario);
             this.KeyPreview = true;
             this.Name = "FormLogin";
-            this.Text = "Login";
+            this.Text = "Login | Taskool";
             ((System.ComponentModel.ISupportInitialize)(this.BordaTxtUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

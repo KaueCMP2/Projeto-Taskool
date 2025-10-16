@@ -147,7 +147,7 @@ namespace Volta_Projeto_Taskool
                     MessageBox.Show($"Parabens {usuarioBuscado.Usuario1}! ", "login efetuado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     SystemSounds.Beep .Play();
 
-                    Form1 nFrm = new Form1();
+                    FormMenu nFrm = new FormMenu();
                     nFrm.Show();
                     this.Hide();
                 }

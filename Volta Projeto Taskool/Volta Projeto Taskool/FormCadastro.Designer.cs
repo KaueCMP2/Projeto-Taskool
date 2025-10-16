@@ -317,7 +317,7 @@
             this.Controls.Add(this.LblNome);
             this.Controls.Add(this.label1);
             this.Name = "FormCadastro";
-            this.Text = "Cadastre-se";
+            this.Text = "Cadastro | Taskool";
             ((System.ComponentModel.ISupportInitialize)(this.BoxSelecionarCredencial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BordaTxtNome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BordaTxtEmail)).EndInit();
